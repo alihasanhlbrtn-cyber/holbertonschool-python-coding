@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Module that defines a Square class with a managed size attribute."""
-    
+"""Module that defines a Square class with printing capability."""
+
 
 class Square:
     """Represents a square."""
@@ -30,3 +30,14 @@ class Square:
     def area(self):
         """Return the current square area."""
         return self.__size ** 2
+
+    def my_print(self):
+        """Print the square using the # character.
+
+        If size is 0, print an empty line.
+        """
+        if self.__size == 0:
+            print()
+            return
+        for _ in range(self.__size):
+            print("#" * self.__size)
